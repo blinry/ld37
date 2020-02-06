@@ -68,7 +68,7 @@ function boringLoad()
 
     music = {}
     for i,filename in pairs(love.filesystem.getDirectoryItems("music")) do
-        music[filename:sub(1,-5)] = love.audio.newSource("music/"..filename)
+        music[filename:sub(1,-5)] = love.audio.newSource("music/"..filename, "stream")
         music[filename:sub(1,-5)]:setLooping(true)
     end
 
